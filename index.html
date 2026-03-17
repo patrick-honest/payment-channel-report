@@ -59,8 +59,8 @@
     </div>
     <div class="kpi">
       <div class="kpi-label">QRIS-Only Merchants</div>
-      <div class="kpi-value">86,098</div>
-      <div class="kpi-change up">+28,647 new this week</div>
+      <div class="kpi-value">73,269</div>
+      <div class="kpi-change up">+24,190 new this week</div>
     </div>
     <div class="kpi">
       <div class="kpi-label">QRIS Unique Users</div>
@@ -117,7 +117,7 @@
 
   <!-- Section 4: Top QRIS-Only Merchants -->
   <div class="section">
-    <h2>4. Top 25 Merchants — QRIS Only (No Card Transactions)</h2>
+    <h2>4. Top 25 QRIS Merchants — Normalized Brands</h2>
     <div class="card" style="overflow-x:auto;">
       <table>
         <thead>
@@ -130,7 +130,7 @@
 
   <!-- Section 5: Top Multi-Channel Merchants -->
   <div class="section">
-    <h2>5. Top 25 Merchants — Both QRIS & Card Transactions</h2>
+    <h2>5. Top 25 Multi-Channel Merchants — Normalized Brands (QRIS + Card)</h2>
     <div class="card" style="overflow-x:auto;">
       <table>
         <thead>
@@ -175,72 +175,72 @@ const channelData = [
 ];
 
 const qrisOnlyMerchants = [
-  {name:"PT Tokopedia",txns:5755,users:3066,volIdr:1792196197,volUsd:112012,avgTicket:311415},
-  {name:"IOH",txns:1703,users:1267,volIdr:113459064,volUsd:7091,avgTicket:66623},
-  {name:"MyTelkomsel Apps",txns:1578,users:1205,volIdr:72191610,volUsd:4512,avgTicket:45749},
+  {name:"PT Tokopedia",txns:5759,users:3068,volIdr:1792545735,volUsd:112034,avgTicket:311260},
+  {name:"IOH",txns:1704,users:1267,volIdr:113491064,volUsd:7093,avgTicket:66603},
+  {name:"MyTelkomsel Apps",txns:1580,users:1205,volIdr:72571610,volUsd:4536,avgTicket:45931},
+  {name:"SPBU Pertamina",txns:1427,users:1038,volIdr:250760058,volUsd:15673,avgTicket:175725},
   {name:"Google Play",txns:1270,users:721,volIdr:91556986,volUsd:5722,avgTicket:72092},
-  {name:"Lazada Indonesia",txns:857,users:441,volIdr:398695240,volUsd:24918,avgTicket:465222},
-  {name:"GRAB TRANSPORT",txns:718,users:331,volIdr:20998100,volUsd:1312,avgTicket:29245},
+  {name:"Grab",txns:1086,users:519,volIdr:49586179,volUsd:3099,avgTicket:45659},
+  {name:"Lazada Indonesia",txns:884,users:448,volIdr:399696189,volUsd:24981,avgTicket:452145},
   {name:"Shopee Express",txns:660,users:270,volIdr:97940581,volUsd:6121,avgTicket:148395},
   {name:"XL",txns:589,users:474,volIdr:28071120,volUsd:1754,avgTicket:47659},
   {name:"Axis",txns:549,users:330,volIdr:9119086,volUsd:570,avgTicket:16610},
   {name:"QPON",txns:534,users:343,volIdr:19380897,volUsd:1211,avgTicket:36294},
-  {name:"ESB RESTAURANT TECHNO",txns:422,users:332,volIdr:33397180,volUsd:2087,avgTicket:79140},
+  {name:"ESB RESTAURANT TECHNO",txns:427,users:334,volIdr:33821780,volUsd:2114,avgTicket:79208},
   {name:"Access By KAI",txns:411,users:259,volIdr:78545060,volUsd:4909,avgTicket:191107},
-  {name:"Zeyro Game",txns:393,users:228,volIdr:591694895,volUsd:36981,avgTicket:1505585},
-  {name:"GRAB FOOD",txns:357,users:222,volIdr:22571078,volUsd:1411,avgTicket:63224},
+  {name:"McDonald's",txns:407,users:320,volIdr:30800000,volUsd:1925,avgTicket:75676},
   {name:"Monetapay",txns:344,users:154,volIdr:34500715,volUsd:2156,avgTicket:100293},
-  {name:"smartfren.com",txns:247,users:197,volIdr:11347259,volUsd:709,avgTicket:45940},
-  {name:"Toko IT Mart",txns:232,users:147,volIdr:49871313,volUsd:3117,avgTicket:214963},
+  {name:"MITRABL",txns:283,users:110,volIdr:236310780,volUsd:14769,avgTicket:835020},
+  {name:"Digital Signage Store",txns:277,users:178,volIdr:37096677,volUsd:2319,avgTicket:133923},
+  {name:"smartfren.com",txns:248,users:198,volIdr:11403759,volUsd:713,avgTicket:45983},
+  {name:"Ecoflux Computer Acce",txns:229,users:128,volIdr:112052108,volUsd:7003,avgTicket:489311},
   {name:"PT Jasaraharja Putera",txns:224,users:1,volIdr:9340000,volUsd:584,avgTicket:41696},
-  {name:"Kopi Kenangan 1320",txns:220,users:164,volIdr:9636440,volUsd:602,avgTicket:43802},
+  {name:"Kopi Kenangan",txns:220,users:164,volIdr:9636440,volUsd:602,avgTicket:43802},
   {name:"SUMBER LOGAM",txns:195,users:1,volIdr:93520000,volUsd:5845,avgTicket:479590},
-  {name:"Ecoflux Computer Acce",txns:192,users:110,volIdr:105743446,volUsd:6609,avgTicket:550747},
-  {name:"HEXA MITRA SISTEM PT",txns:189,users:153,volIdr:24671685,volUsd:1542,avgTicket:130538},
+  {name:"HEXA MITRA SISTEM PT-",txns:189,users:153,volIdr:24671685,volUsd:1542,avgTicket:130538},
   {name:"Anekastudio Org",txns:186,users:125,volIdr:16438273,volUsd:1027,avgTicket:88378},
-  {name:"Coda Payments",txns:179,users:122,volIdr:19664087,volUsd:1229,avgTicket:109855},
-  {name:"FLIP",txns:176,users:96,volIdr:49606759,volUsd:3100,avgTicket:281857}
+  {name:"Coda Payments",txns:179,users:122,volIdr:19664087,volUsd:1229,avgTicket:109855}
 ];
 
 const multiChannelMerchants = [
-  {name:"LivU",total:1485,qris:1,online:1484,offline:0,users:7,volUsd:16194},
-  {name:"Google Play",total:1286,qris:1270,online:12,offline:4,users:737,volUsd:6147},
-  {name:"BLIBLI.COM",total:1154,qris:151,online:848,offline:155,users:663,volUsd:184784},
-  {name:"TOKO DAGING NUSANTARA",total:379,qris:34,online:0,offline:345,users:274,volUsd:7975},
-  {name:"AEON STORE TJB",total:321,qris:41,online:0,offline:280,users:182,volUsd:4645},
-  {name:"PAPAYA FRESH GALLERY",total:284,qris:41,online:0,offline:243,users:209,volUsd:4596},
-  {name:"BRASTAGI SUPERMARKET",total:274,qris:13,online:0,offline:261,users:180,volUsd:9110},
-  {name:"WATSONS PERSONAL CARE",total:270,qris:28,online:0,offline:242,users:242,volUsd:3348},
-  {name:"GRANDLUCKY MOI",total:267,qris:17,online:0,offline:250,users:121,volUsd:4140},
-  {name:"SPBU 31.15302,BSD",total:260,qris:20,online:0,offline:240,users:150,volUsd:3529},
-  {name:"DIAMOND SUPERMARKET",total:241,qris:14,online:0,offline:227,users:148,volUsd:7251},
-  {name:"AEON STORE - BSD CITY",total:227,qris:49,online:0,offline:178,users:158,volUsd:3646},
-  {name:"SPBU REST AREA 19B",total:218,qris:11,online:0,offline:207,users:80,volUsd:8837},
-  {name:"SPBU 31.15401,BINTARO",total:216,qris:17,online:0,offline:199,users:131,volUsd:3099},
-  {name:"SPBU 31.12902,R.SAID",total:209,qris:22,online:0,offline:187,users:125,volUsd:3242},
-  {name:"LOTTE MART GANDARIA",total:207,qris:27,online:0,offline:180,users:126,volUsd:3322},
-  {name:"DIAMOND SPM,MAG-HO",total:201,qris:6,online:0,offline:195,users:127,volUsd:4408},
-  {name:"SPBU 34-14210",total:193,qris:12,online:0,offline:181,users:115,volUsd:2851},
-  {name:"IKEA ALAM SUTERA",total:189,qris:17,online:0,offline:172,users:104,volUsd:7563},
-  {name:"BP KELAPA GADING",total:188,qris:11,online:0,offline:177,users:98,volUsd:3045},
-  {name:"RICHEESE FACTORY",total:184,qris:25,online:0,offline:159,users:145,volUsd:1485},
-  {name:"SPBU 14.201.1166 ADAM",total:180,qris:9,online:0,offline:171,users:83,volUsd:3037},
-  {name:"BP HR MUHAMMAD",total:177,qris:10,online:0,offline:167,users:88,volUsd:2190},
-  {name:"AEON STORE EASTVARA",total:176,qris:30,online:0,offline:146,users:95,volUsd:2509},
-  {name:"SAMUDRA SUPERMARKET",total:175,qris:5,online:0,offline:170,users:104,volUsd:3425}
+  {name:"Grab",total:1082970,qris:1086,online:1057761,offline:24123,users:30280,volUsd:3020698},
+  {name:"SPBU Pertamina",total:392715,qris:4430,online:182,offline:388103,users:42028,volUsd:6266151},
+  {name:"Indomaret",total:146660,qris:1,online:0,offline:146659,users:38621,volUsd:1108992},
+  {name:"Alfamart",total:125361,qris:81,online:0,offline:125280,users:30542,volUsd:805541},
+  {name:"McDonald's",total:32700,qris:407,online:903,offline:31390,users:14768,volUsd:173381},
+  {name:"BLIBLI.COM",total:25968,qris:151,online:25650,offline:167,users:7587,volUsd:2657712},
+  {name:"PT Tokopedia",total:13353,qris:5759,online:7404,offline:190,users:5611,volUsd:239621},
+  {name:"Canva",total:6329,qris:1,online:6233,offline:95,users:1597,volUsd:44768},
+  {name:"LivU",total:3321,qris:1,online:3320,offline:0,users:55,volUsd:9622},
+  {name:"RICHEESE FACTORY",total:2896,qris:25,online:0,offline:2871,users:2132,volUsd:24469},
+  {name:"AEON STORE TJB",total:2846,qris:41,online:0,offline:2805,users:1147,volUsd:35547},
+  {name:"HARI HARI SWALAYAN",total:2590,qris:14,online:0,offline:2576,users:1271,volUsd:67683},
+  {name:"J.CO DONUTS & COFFEE",total:2425,qris:28,online:0,offline:2397,users:2001,volUsd:19044},
+  {name:"WATSONS PERSONAL CARE",total:2363,qris:28,online:0,offline:2335,users:1731,volUsd:31048},
+  {name:"BRASTAGI SUPERMARKET",total:2291,qris:13,online:0,offline:2278,users:823,volUsd:72973},
+  {name:"AEON BSD SSM",total:2272,qris:4,online:0,offline:2268,users:1167,volUsd:43541},
+  {name:"IOH",total:2091,qris:1704,online:285,offline:102,users:1446,volUsd:13384},
+  {name:"DIAMOND SPM,MAG-HO",total:2054,qris:7,online:0,offline:2047,users:749,volUsd:48597},
+  {name:"PAPAYA FRESH GALLERY",total:2035,qris:42,online:0,offline:1993,users:1078,volUsd:30659},
+  {name:"KCIC",total:1948,qris:19,online:1906,offline:23,users:804,volUsd:51910},
+  {name:"IKEA ALAM SUTERA",total:1882,qris:28,online:0,offline:1854,users:948,volUsd:56376},
+  {name:"BAKSO LAPANGAN TEMBAK",total:1868,qris:29,online:0,offline:1839,users:1292,volUsd:21048},
+  {name:"GRANDLUCKY MOI",total:1811,qris:17,online:0,offline:1794,users:584,volUsd:31749},
+  {name:"TOTAL BUAH SEGAR",total:1702,qris:9,online:0,offline:1693,users:913,volUsd:35044},
+  {name:"Google Play",total:1632,qris:1270,online:335,offline:27,users:954,volUsd:6663}
 ];
 
 const cumulativeData = [
-  {week:"Jan 12",newM:716,cum:716},
-  {week:"Jan 19",newM:650,cum:1366},
-  {week:"Jan 26",newM:620,cum:1986},
-  {week:"Feb 2",newM:1935,cum:3921},
-  {week:"Feb 9",newM:1799,cum:5720},
-  {week:"Feb 16",newM:1544,cum:7264},
-  {week:"Feb 23",newM:14055,cum:21319},
-  {week:"Mar 2",newM:36132,cum:57451},
-  {week:"Mar 9",newM:28647,cum:86098},
-  {week:"Mar 16",newM:4490,cum:90588}
+  {week:"Jan 12",newM:807,cum:807},
+  {week:"Jan 19",newM:458,cum:1265},
+  {week:"Jan 26",newM:440,cum:1705},
+  {week:"Feb 2",newM:1569,cum:3274},
+  {week:"Feb 9",newM:1472,cum:4746},
+  {week:"Feb 16",newM:1218,cum:5964},
+  {week:"Feb 23",newM:12350,cum:18314},
+  {week:"Mar 2",newM:30765,cum:49079},
+  {week:"Mar 9",newM:24190,cum:73269},
+  {week:"Mar 16",newM:3853,cum:77122}
 ];
 
 // ─── HELPERS ───
